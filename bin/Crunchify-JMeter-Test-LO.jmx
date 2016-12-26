@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="App Shah Desktop Test" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Crunchify&apos;s REST Service JMeter Test" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">100</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <longProp name="ThreadGroup.start_time">1367432020000</longProp>
+        <longProp name="ThreadGroup.end_time">1367432020000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">User-Agent</stringProp>
+              <stringProp name="Header.value">Mozilla/4.0 (compatible; MSIE 5.5; Windows 98)</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;buyer_accepts_marketing&quot;: false,&#xd;
+  &quot;cancel_reason&quot;: null,&#xd;
+  &quot;cancelled_at&quot;: null,&#xd;
+  &quot;cart_token&quot;: &quot;95e119f66aaa5a34d996b658ad14f848&quot;,&#xd;
+  &quot;checkout_token&quot;: &quot;f616aa3b08e72da888c6d8e62a3e24b4&quot;,&#xd;
+  &quot;closed_at&quot;: null,&#xd;
+  &quot;confirmed&quot;: true,&#xd;
+  &quot;created_at&quot;: &quot;2015-03-27T10:14:25-04:00&quot;,&#xd;
+  &quot;currency&quot;: &quot;SGD&quot;,&#xd;
+  &quot;device_id&quot;: null,&#xd;
+  &quot;email&quot;: &quot;shaun@ninjavan.sg&quot;,&#xd;
+  &quot;financial_status&quot;: &quot;authorized&quot;,&#xd;
+  &quot;fulfillment_status&quot;: null,&#xd;
+  &quot;gateway&quot;: &quot;bogus&quot;,&#xd;
+  &quot;id&quot;: 397089961,&#xd;
+  &quot;landing_site&quot;: &quot;/?_ab=0&amp;_fd=0&amp;_sc=1&amp;key=803cbd806e818ee0ce3a8bafa452193a2ef4df12a2bc19867489fa706e141bf1&quot;,&#xd;
+  &quot;location_id&quot;: null,&#xd;
+  &quot;name&quot;: &quot;#1001&quot;,&#xd;
+  &quot;note&quot;: &quot;&quot;,&#xd;
+  &quot;number&quot;: 1,&#xd;
+  &quot;processed_at&quot;: &quot;2015-03-27T10:14:25-04:00&quot;,&#xd;
+  &quot;reference&quot;: null,&#xd;
+  &quot;referring_site&quot;: &quot;https://shopify-nv-integration.myshopify.com/admin&quot;,&#xd;
+  &quot;source_identifier&quot;: null,&#xd;
+  &quot;source_url&quot;: null,&#xd;
+  &quot;subtotal_price&quot;: &quot;49.00&quot;,&#xd;
+  &quot;taxes_included&quot;: true,&#xd;
+  &quot;test&quot;: true,&#xd;
+  &quot;token&quot;: &quot;7e395ad68fff32c44a4263fdc727c1de&quot;,&#xd;
+  &quot;total_discounts&quot;: &quot;0.00&quot;,&#xd;
+  &quot;total_line_items_price&quot;: &quot;49.00&quot;,&#xd;
+  &quot;total_price&quot;: &quot;67.00&quot;,&#xd;
+  &quot;total_price_usd&quot;: &quot;48.91&quot;,&#xd;
+  &quot;total_tax&quot;: &quot;0.00&quot;,&#xd;
+  &quot;total_weight&quot;: 7711,&#xd;
+  &quot;updated_at&quot;: &quot;2015-03-27T10:14:25-04:00&quot;,&#xd;
+  &quot;user_id&quot;: null,&#xd;
+  &quot;browser_ip&quot;: &quot;101.100.169.86&quot;,&#xd;
+  &quot;landing_site_ref&quot;: null,&#xd;
+  &quot;order_number&quot;: 1001,&#xd;
+  &quot;discount_codes&quot;: [],&#xd;
+  &quot;note_attributes&quot;: [],&#xd;
+  &quot;processing_method&quot;: &quot;direct&quot;,&#xd;
+  &quot;source&quot;: &quot;checkout_next&quot;,&#xd;
+  &quot;checkout_id&quot;: 464412957,&#xd;
+  &quot;source_name&quot;: &quot;web&quot;,&#xd;
+  &quot;tax_lines&quot;: [],&#xd;
+  &quot;tags&quot;: &quot;&quot;,&#xd;
+  &quot;line_items&quot;: [&#xd;
+    {&#xd;
+      &quot;fulfillment_service&quot;: &quot;manual&quot;,&#xd;
+      &quot;fulfillment_status&quot;: null,&#xd;
+      &quot;gift_card&quot;: false,&#xd;
+      &quot;grams&quot;: 6350,&#xd;
+      &quot;id&quot;: 694187161,&#xd;
+      &quot;price&quot;: &quot;33.00&quot;,&#xd;
+      &quot;product_id&quot;: 439525401,&#xd;
+      &quot;quantity&quot;: 1,&#xd;
+      &quot;requires_shipping&quot;: true,&#xd;
+      &quot;sku&quot;: &quot;G3HK&quot;,&#xd;
+      &quot;taxable&quot;: true,&#xd;
+      &quot;title&quot;: &quot;Heckler &amp; Koch HK G3&quot;,&#xd;
+      &quot;variant_id&quot;: 1155612517,&#xd;
+      &quot;variant_title&quot;: &quot;&quot;,&#xd;
+      &quot;vendor&quot;: &quot;shopify-nv-integration&quot;,&#xd;
+      &quot;name&quot;: &quot;Heckler &amp; Koch HK G3&quot;,&#xd;
+      &quot;variant_inventory_management&quot;: null,&#xd;
+      &quot;properties&quot;: [],&#xd;
+      &quot;product_exists&quot;: true,&#xd;
+      &quot;fulfillable_quantity&quot;: 1,&#xd;
+      &quot;total_discount&quot;: &quot;0.00&quot;,&#xd;
+      &quot;tax_lines&quot;: []&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;fulfillment_service&quot;: &quot;manual&quot;,&#xd;
+      &quot;fulfillment_status&quot;: null,&#xd;
+      &quot;gift_card&quot;: false,&#xd;
+      &quot;grams&quot;: 1361,&#xd;
+      &quot;id&quot;: 694187165,&#xd;
+      &quot;price&quot;: &quot;16.00&quot;,&#xd;
+      &quot;product_id&quot;: 439524381,&#xd;
+      &quot;quantity&quot;: 1,&#xd;
+      &quot;requires_shipping&quot;: true,&#xd;
+      &quot;sku&quot;: &quot;M161234-ABC&quot;,&#xd;
+      &quot;taxable&quot;: true,&#xd;
+      &quot;title&quot;: &quot;M16 Rifle&quot;,&#xd;
+      &quot;variant_id&quot;: 1155610505,&#xd;
+      &quot;variant_title&quot;: &quot;&quot;,&#xd;
+      &quot;vendor&quot;: &quot;shopify-nv-integration&quot;,&#xd;
+      &quot;name&quot;: &quot;M16 Rifle&quot;,&#xd;
+      &quot;variant_inventory_management&quot;: null,&#xd;
+      &quot;properties&quot;: [],&#xd;
+      &quot;product_exists&quot;: true,&#xd;
+      &quot;fulfillable_quantity&quot;: 1,&#xd;
+      &quot;total_discount&quot;: &quot;0.00&quot;,&#xd;
+      &quot;tax_lines&quot;: []&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;shipping_lines&quot;: [&#xd;
+    {&#xd;
+      &quot;code&quot;: &quot;International Shipping&quot;,&#xd;
+      &quot;price&quot;: &quot;18.00&quot;,&#xd;
+      &quot;source&quot;: &quot;shopify&quot;,&#xd;
+      &quot;title&quot;: &quot;International Shipping&quot;,&#xd;
+      &quot;tax_lines&quot;: []&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;billing_address&quot;: {&#xd;
+    &quot;address1&quot;: &quot;Our address&quot;,&#xd;
+    &quot;address2&quot;: &quot;&quot;,&#xd;
+    &quot;city&quot;: &quot;SG&quot;,&#xd;
+    &quot;company&quot;: &quot;Ninja Van&quot;,&#xd;
+    &quot;country&quot;: &quot;Singapore&quot;,&#xd;
+    &quot;first_name&quot;: &quot;Shaun&quot;,&#xd;
+    &quot;last_name&quot;: &quot;Chong&quot;,&#xd;
+    &quot;latitude&quot;: 1.28448,&#xd;
+    &quot;longitude&quot;: 103.809158,&#xd;
+    &quot;phone&quot;: &quot;124242&quot;,&#xd;
+    &quot;province&quot;: &quot;&quot;,&#xd;
+    &quot;zip&quot;: &quot;159363&quot;,&#xd;
+    &quot;name&quot;: &quot;Shaun Chong&quot;,&#xd;
+    &quot;country_code&quot;: &quot;SG&quot;,&#xd;
+    &quot;province_code&quot;: null&#xd;
+  },&#xd;
+  &quot;shipping_address&quot;: {&#xd;
+    &quot;address1&quot;: &quot;Our address&quot;,&#xd;
+    &quot;address2&quot;: &quot;&quot;,&#xd;
+    &quot;city&quot;: &quot;SG&quot;,&#xd;
+    &quot;company&quot;: &quot;Ninja Van&quot;,&#xd;
+    &quot;country&quot;: &quot;Singapore&quot;,&#xd;
+    &quot;first_name&quot;: &quot;Shaun&quot;,&#xd;
+    &quot;last_name&quot;: &quot;Chong&quot;,&#xd;
+    &quot;latitude&quot;: 1.28448,&#xd;
+    &quot;longitude&quot;: 103.809158,&#xd;
+    &quot;phone&quot;: &quot;124242&quot;,&#xd;
+    &quot;province&quot;: &quot;&quot;,&#xd;
+    &quot;zip&quot;: &quot;159363&quot;,&#xd;
+    &quot;name&quot;: &quot;Shaun Chong&quot;,&#xd;
+    &quot;country_code&quot;: &quot;SG&quot;,&#xd;
+    &quot;province_code&quot;: null&#xd;
+  },&#xd;
+  &quot;fulfillments&quot;: [],&#xd;
+  &quot;client_details&quot;: {&#xd;
+    &quot;accept_language&quot;: &quot;en-US,en;q=0.8&quot;,&#xd;
+    &quot;browser_height&quot;: 864,&#xd;
+    &quot;browser_ip&quot;: &quot;101.100.169.86&quot;,&#xd;
+    &quot;browser_width&quot;: 1775,&#xd;
+    &quot;session_hash&quot;: &quot;81dee438bcfdd80b8bbb55f15c3c2ce0ce2ff5a8b0b5478d0bc4ba4f3701cd84&quot;,&#xd;
+    &quot;user_agent&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36&quot;&#xd;
+  },&#xd;
+  &quot;refunds&quot;: [],&#xd;
+  &quot;payment_details&quot;: {&#xd;
+    &quot;avs_result_code&quot;: null,&#xd;
+    &quot;credit_card_bin&quot;: &quot;1&quot;,&#xd;
+    &quot;cvv_result_code&quot;: null,&#xd;
+    &quot;credit_card_number&quot;: &quot;•••• •••• •••• 1&quot;,&#xd;
+    &quot;credit_card_company&quot;: &quot;Bogus&quot;&#xd;
+  },&#xd;
+  &quot;customer&quot;: {&#xd;
+    &quot;accepts_marketing&quot;: false,&#xd;
+    &quot;created_at&quot;: &quot;2015-03-27T10:13:49-04:00&quot;,&#xd;
+    &quot;email&quot;: &quot;shaun@ninjavan.sg&quot;,&#xd;
+    &quot;first_name&quot;: &quot;Shaun&quot;,&#xd;
+    &quot;id&quot;: 371939693,&#xd;
+    &quot;last_name&quot;: &quot;Chong&quot;,&#xd;
+    &quot;last_order_id&quot;: null,&#xd;
+    &quot;multipass_identifier&quot;: null,&#xd;
+    &quot;note&quot;: null,&#xd;
+    &quot;orders_count&quot;: 0,&#xd;
+    &quot;state&quot;: &quot;disabled&quot;,&#xd;
+    &quot;total_spent&quot;: &quot;0.00&quot;,&#xd;
+    &quot;updated_at&quot;: &quot;2015-03-27T10:14:25-04:00&quot;,&#xd;
+    &quot;verified_email&quot;: true,&#xd;
+    &quot;tags&quot;: &quot;&quot;,&#xd;
+    &quot;last_order_name&quot;: null,&#xd;
+    &quot;default_address&quot;: {&#xd;
+      &quot;address1&quot;: &quot;Our address&quot;,&#xd;
+      &quot;address2&quot;: &quot;&quot;,&#xd;
+      &quot;city&quot;: &quot;SG&quot;,&#xd;
+      &quot;company&quot;: &quot;Ninja Van&quot;,&#xd;
+      &quot;country&quot;: &quot;Singapore&quot;,&#xd;
+      &quot;first_name&quot;: &quot;Shaun&quot;,&#xd;
+      &quot;id&quot;: 445448485,&#xd;
+      &quot;last_name&quot;: &quot;Chong&quot;,&#xd;
+      &quot;phone&quot;: &quot;124242&quot;,&#xd;
+      &quot;province&quot;: &quot;&quot;,&#xd;
+      &quot;zip&quot;: &quot;159363&quot;,&#xd;
+      &quot;name&quot;: &quot;Shaun Chong&quot;,&#xd;
+      &quot;province_code&quot;: null,&#xd;
+      &quot;country_code&quot;: &quot;SG&quot;,&#xd;
+      &quot;country_name&quot;: &quot;Singapore&quot;,&#xd;
+      &quot;default&quot;: true&#xd;
+    }&#xd;
+  }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">api-staging.ninjavan.sg</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">1000</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/2.0/operator/shopify/shippers/235/shopifyorder</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

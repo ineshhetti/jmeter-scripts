@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
+  <hashTree>
+    <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+      <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+      <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="" elementType="HTTPArgument">
+            <boolProp name="HTTPArgument.always_encode">false</boolProp>
+            <stringProp name="Argument.value">[&#xd;
+    {&#xd;
+&quot;shipper_id&quot;:1,&#xd;
+&quot;allow_prefixless&quot;:false,&#xd;
+&quot;shipper_prefix&quot;:&quot;RACE1234&quot;,&#xd;
+&quot;shipper_type&quot;:&quot;N&quot;,&#xd;
+&quot;from_latitude&quot;:0,&#xd;
+&quot;from_longitude&quot;:0,&#xd;
+&quot;to_latitude&quot;:0,&#xd;
+&quot;to_longitude&quot;:0,&#xd;
+&quot;shipper_order_ref_no&quot;: &quot;&quot;,&#xd;
+&quot;requested_tracking_id&quot;: &quot;9887656759RR&quot;,&#xd;
+&quot;staging&quot;: true,&#xd;
+&quot;pickup_date&quot;: &quot;2014-12-01&quot;,&#xd;
+&quot;pickup_timewindow_id&quot;: 0,&#xd;
+&quot;delivery_date&quot;: &quot;2014-12-02&quot;,&#xd;
+&quot;delivery_timewindow_id&quot;: 3,&#xd;
+&quot;pickup_weekend&quot;: true,&#xd;
+&quot;delivery_weekend&quot;: true,&#xd;
+&quot;max_delivery_days&quot;: 3,&#xd;
+&quot;instruction&quot;: &quot;&quot;,&#xd;
+&quot;from_country&quot;: &quot;SG&quot;,&#xd;
+&quot;from_state&quot;: &quot;SG&quot;,&#xd;
+&quot;from_city&quot;: &quot;SG&quot;,&#xd;
+&quot;from_postcode&quot;: &quot;349327&quot;,&#xd;
+&quot;from_address1&quot;: &quot;68 KALLANG PUDDING ROAD&quot;,&#xd;
+&quot;from_address2&quot;:&#xd;
+&quot;SYH LOGISTICS BUILDING 04-04&quot;,&#xd;
+&quot;from_name&quot;: &quot;Love, Bonito&quot;,&#xd;
+&quot;from_contact&quot;: &quot;98187914&quot;,&#xd;
+&quot;from_email&quot;: &quot;peijie@lovebonito.com&quot;,&#xd;
+&quot;to_country&quot;: &quot;SG&quot;,&#xd;
+&quot;to_state&quot;: &quot;SG&quot;,&#xd;
+&quot;to_city&quot;: &quot;SG&quot;,&#xd;
+&quot;to_postcode&quot;: &quot;310229&quot;,&#xd;
+&quot;to_address1&quot;: &quot;Blk 1000 Abc Road.&quot;,&#xd;
+&quot;to_address2&quot;: &quot;#01-01&quot;,&#xd;
+&quot;to_email&quot;: &quot;kwanghock@marcella.com.sg&quot;,&#xd;
+&quot;to_name&quot;: &quot;Kwanghock&quot;,&#xd;
+&quot;to_contact&quot;: &quot;98745678&quot;,&#xd;
+&quot;customer_ref_no&quot;: &quot;10&quot;,&#xd;
+&quot;order_type&quot;: &quot;Normal&quot;,&#xd;
+&quot;parcels&quot;: [&#xd;
+    {&#xd;
+        &quot;weight&quot;: 10.5,&#xd;
+        &quot;volume&quot;: 400,&#xd;
+        &quot;parcel_size&quot;: 3&#xd;
+    }&#xd;
+ ]&#xd;
+}&#xd;
+]</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="HTTPSampler.domain">localhost</stringProp>
+      <stringProp name="HTTPSampler.port">9000</stringProp>
+      <stringProp name="HTTPSampler.connect_timeout">4000</stringProp>
+      <stringProp name="HTTPSampler.response_timeout">100</stringProp>
+      <stringProp name="HTTPSampler.protocol"></stringProp>
+      <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+      <stringProp name="HTTPSampler.path">/payload</stringProp>
+      <stringProp name="HTTPSampler.method">POST</stringProp>
+      <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+      <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+      <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+      <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+      <boolProp name="HTTPSampler.monitor">false</boolProp>
+      <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+    </HTTPSamplerProxy>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="App Shah Desktop Test" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Crunchify&apos;s REST Service JMeter Test" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <longProp name="ThreadGroup.start_time">1367432020000</longProp>
+        <longProp name="ThreadGroup.end_time">1367432020000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">User-Agent</stringProp>
+              <stringProp name="Header.value">Mozilla/4.0 (compatible; MSIE 5.5; Windows 98)</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[{&quot;shipper_id&quot;:680,&quot;allow_prefixless&quot;:false,&quot;requested_tracking_id&quot;:&quot;&quot;,&quot;customer_ref_no&quot;:109112,&quot;instruction&quot;:&quot;&quot;,&quot;order_type&quot;:&quot;N&quot;,&quot;shipper_type&quot;:&quot;N&quot;,&quot;shipper_prefix&quot;:&quot;MPDS&quot;,&quot;max_delivery_days&quot;:1,&quot;pickup_date&quot;:&quot;2015-11-25&quot;,&quot;pickup_timewindow_id&quot;:3,&quot;delivery_date&quot;:&quot;2015-11-27&quot;,&quot;delivery_timewindow_id&quot;:-1,&quot;pickup_reach_by&quot;:null,&quot;delivery_reach_by&quot;:null,&quot;from_postcode&quot;:&quot;159363&quot;,&quot;from_address1&quot;:&quot;30 JALAN KILANG BARAT&quot;,&quot;from_address2&quot;:&quot;&quot;,&quot;from_country&quot;:&quot;SG&quot;,&quot;from_city&quot;:&quot;SG&quot;,&quot;from_name&quot;:&quot;Ninjavan&quot;,&quot;from_email&quot;:&quot;support@ninjavan.sg&quot;,&quot;from_contact&quot;:&quot;66356614&quot;,&quot;to_postcode&quot;:&quot;544203&quot;,&quot;to_address1&quot;:&quot;BLOCK 203D COMPASSVALE ROAD&quot;,&quot;to_address2&quot;:&quot;16-59&quot;,&quot;to_country&quot;:&quot;SG&quot;,&quot;to_city&quot;:&quot;SG&quot;,&quot;to_name&quot;:&quot;JOANNE YANG&quot;,&quot;to_email&quot;:&quot;support@ninjavan.sg&quot;,&quot;to_contact&quot;:&quot;90615282&quot;,&quot;goods_amount&quot;:null,&quot;shipping_amount&quot;:null,&quot;cod_collection_point&quot;:null,&quot;bulk_id&quot;:null,&quot;bulk_qty&quot;:null,&quot;pickup_weekend&quot;:true,&quot;delivery_weekend&quot;:true,&quot;staging&quot;:false,&quot;parcels&quot;:[{&quot;weight&quot;:10,&quot;volume&quot;:1,&quot;parcel_size&quot;:1,&quot;uuid&quot;:&quot;b244f707-5656-154c-2fdb-e27e53309a07&quot;}],&quot;source_id&quot;:0,&quot;bulk_sequence_number&quot;:null,&quot;from_latitude&quot;:1.2843983900196,&quot;from_longitude&quot;:103.80945651584,&quot;to_latitude&quot;:1.3870142261229,&quot;to_longitude&quot;:103.89551865754,&quot;from_waypoint_id&quot;:3622291,&quot;to_waypoint_id&quot;:null}]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">https://api-staging.ninjavan.sg/3.0/orders/</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">4000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">100</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/payloadBlock</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
